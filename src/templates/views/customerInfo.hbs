@@ -1,0 +1,43 @@
+{{>header}}
+<div class="container mt-5">
+  <h1>Add customer</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+<form method="POST" action="/customerInfo">
+   <div class="form-group">
+  <label>Name</label>
+  <input type="text" class="form-control" name="name" id="name" />
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="text" class="form-control" name="email" id="email"  />
+</div>
+<div class="form-group">
+<label>Phone</label>
+<input type="text" class="form-control" name="phone" id="phone" />
+</div>
+<div class="form-group formfield">
+<label>Address</label>
+<textarea type="text"class="form-control"  name="address" id="address" rows="2" cols="20"/></textarea>
+</div>
+<div class="form-group">
+<label>GST no.</label>
+<input type="text" class="form-control" name="gst" id="gst"/>
+</div>
+<div class="form-group">
+<label>Frequecy of automated reminder</label>
+<input type="text" class="form-control" name="freq" id="freq"/>
+</div>
+  <button class="btn btn-dark">Add</button>
+</form>
+</div>
+</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

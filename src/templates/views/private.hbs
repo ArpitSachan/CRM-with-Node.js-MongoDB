@@ -1,0 +1,66 @@
+{{>header}}
+<div class="container mt-5">
+  <h1>Customers</h1>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body">
+
+    <form action="/users/logout" method="get" style="float: left;">
+      <button class="btn btn-light">Logout</button>
+    </form>
+    <form action="/users/logoutAll" method="get" style="float: right;">
+      <button class="btn btn-light">Logout All</button>
+    </form>
+
+    <a class="btn btn-dark" href="/customerInfo" role="button" >Add Customer</a>
+
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-dark">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>GST no.</th>
+        <th>Frequency</th>
+        <th>Actions</th>
+      </thead>
+    <tbody>
+    {{#each customers}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+        <td>{{phone}}</td>
+        <td>{{address}}</td>
+        <td>{{gst}}</td>
+        <td>{{freq}}</td>
+        <td>
+          <form action="/history/{{_id}}" method="get" >
+            <button class="btn btn-light download-btn" style="width:50px;"><i class="far fa-folder-open"></i></button>
+          </form>
+
+          <form action="/updateInfo/{{_id}}" method="get">
+            <button class="btn btn-light download-btn" style="width:50px;"><i class="far fa-edit"></i></button>
+          </form>
+
+          <form action="/delete/{{_id}}" method="post" >
+            <button class="btn btn-light download-btn" style="width:50px;"><i class="far fa-trash-alt"></i></button>
+          </form>
+
+
+          <form action="/email/{{_id}}" method="get" >
+            <button class="btn btn-light download-btn" style="width:50px;"><i class="far fa-envelope"></i></button>
+          </form>
+        </td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+</div>
+</div>
+  </div>
+</div>
+</div>
+  </body>
+</html>

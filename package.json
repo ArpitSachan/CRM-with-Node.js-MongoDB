@@ -1,0 +1,35 @@
+{
+  "name": "crm-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "kue": "^0.11.6",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.26",
+    "nodemailer": "^6.4.10",
+    "path": "^0.12.7",
+    "redis": "^3.0.2",
+    "reds": "^1.0.0",
+    "validator": "^13.1.1",
+    "winston": "^3.3.3"
+  }
+}

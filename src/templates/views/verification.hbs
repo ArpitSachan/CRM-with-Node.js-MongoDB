@@ -1,0 +1,23 @@
+{{>header}}
+<div class="container mt-5">
+  <h1>Verify, Please!</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+      <form method="POST" action="/users/verification">
+        <div class="form-group">
+      <label>Verification Code</label>
+      <input type="text" class="form-control" name="token" id="token"/>
+    </div>
+      <button class="btn btn-dark">Verifiy</button>
+    </form>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
